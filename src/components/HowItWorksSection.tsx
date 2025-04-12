@@ -1,62 +1,188 @@
 
+import { useState } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
 
-const steps = [
-  {
-    number: "01",
-    title: "Изтеглете Приложението",
-    description: "Вземете нашето приложение от App Store или Google Play Store само с един клик."
-  },
-  {
-    number: "02",
-    title: "Създайте Акаунт",
-    description: "Настройте профила си за секунди и персонализирайте предпочитанията си."
-  },
-  {
-    number: "03",
-    title: "Разгледайте Функциите",
-    description: "Открийте всички инструменти и функции, налични за подобряване на вашето изживяване."
-  }
+const universities = [
+  "Софийски университет",
+  "Технически университет - София",
+  "УНСС",
+  "Медицински университет - София",
+  "Нов български университет",
+  "Американски университет в България"
+];
+
+const majors = [
+  "Компютърни науки",
+  "Софтуерно инженерство",
+  "Информатика",
+  "Електроника",
+  "Финанси",
+  "Маркетинг",
+  "Медицина",
+  "Биология",
+  "Икономика",
+  "Право"
 ];
 
 const benefits = [
-  "Спестете до 10 часа всяка седмица",
-  "Намалете стреса с автоматизирана организация",
-  "Свържете се с вашата мрежа безпроблемно",
-  "Достъп до важна информация моментално"
+  "Свържете се директно със студенти от избраната специалност",
+  "Получете реална представа за университетския живот",
+  "Задайте въпроси за приемния процес",
+  "Разберете какво е нужно за успех в избраната специалност"
 ];
 
 const HowItWorksSection = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    university: "",
+    major: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSelectChange = (name: string) => (value: string) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast({
+        title: "Заявката е изпратена успешно!",
+        description: "Нашият екип ще се свърже с вас скоро на посочения имейл.",
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        university: "",
+        major: ""
+      });
+    }, 1500);
+  };
+
   return (
     <section id="how-it-works" className="section-padding bg-ultra-violet text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6">Как Работи</h2>
+            <h2 className="text-4xl font-bold mb-6">Свържете се със студенти</h2>
             <p className="text-white/80 mb-8 text-lg">
-              Започването е просто. Следвайте тези стъпки, за да трансформирате мобилното си изживяване днес.
+              Попълнете формата, за да се свържете с настоящ студент от избраната специалност и университет. Получете ценни съвети от първа ръка!
             </p>
             
-            <div className="space-y-8">
-              {steps.map((step, index) => (
-                <div key={index} className="flex">
-                  <div className="mr-6">
-                    <div className="w-12 h-12 rounded-full bg-iris flex items-center justify-center font-bold text-white">
-                      {step.number}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                    <p className="text-white/70">{step.description}</p>
-                  </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName" className="text-white">Име</Label>
+                  <Input
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Въведете име"
+                    className="bg-white/10 border-iris/30 text-white placeholder:text-white/50"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
+                  />
                 </div>
-              ))}
-            </div>
+                <div className="space-y-2">
+                  <Label htmlFor="lastName" className="text-white">Фамилия</Label>
+                  <Input
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Въведете фамилия"
+                    className="bg-white/10 border-iris/30 text-white placeholder:text-white/50"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-white">Имейл</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="вашият@имейл.com"
+                  className="bg-white/10 border-iris/30 text-white placeholder:text-white/50"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="university" className="text-white">Желан университет</Label>
+                <Select 
+                  value={formData.university} 
+                  onValueChange={handleSelectChange("university")}
+                  required
+                >
+                  <SelectTrigger id="university" className="bg-white/10 border-iris/30 text-white">
+                    <SelectValue placeholder="Изберете университет" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {universities.map((uni) => (
+                      <SelectItem key={uni} value={uni}>
+                        {uni}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="major" className="text-white">Желана специалност</Label>
+                <Select 
+                  value={formData.major} 
+                  onValueChange={handleSelectChange("major")}
+                  required
+                >
+                  <SelectTrigger id="major" className="bg-white/10 border-iris/30 text-white">
+                    <SelectValue placeholder="Изберете специалност" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {majors.map((major) => (
+                      <SelectItem key={major} value={major}>
+                        {major}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <Button 
+                type="submit" 
+                className="w-full bg-screamin-green hover:bg-screamin-green/90 text-ultra-violet mt-4"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Изпращане..." : "Изпрати заявка"}
+              </Button>
+            </form>
           </div>
           
           <div className="bg-iris/10 p-8 rounded-xl border border-iris/30">
-            <h3 className="text-2xl font-semibold mb-6">Защо Да Изберете Нашето Приложение?</h3>
+            <h3 className="text-2xl font-semibold mb-6">Какви са ползите?</h3>
             
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
@@ -69,9 +195,12 @@ const HowItWorksSection = () => {
               ))}
             </div>
             
-            <Button className="w-full bg-screamin-green hover:bg-screamin-green/90 text-ultra-violet">
-              Започнете Днес
-            </Button>
+            <div className="bg-iris/20 p-4 rounded-lg">
+              <p className="text-sm italic">
+                "След подаване на заявката, нашият екип ще провери наличието на система за избрания университет. 
+                Ще получите имейл с временни данни за достъп, за да се свържете с активен студент от избраната специалност."
+              </p>
+            </div>
           </div>
         </div>
       </div>
