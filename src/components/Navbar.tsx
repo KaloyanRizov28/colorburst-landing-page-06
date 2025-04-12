@@ -20,7 +20,7 @@ const Navbar = () => {
               Функции
             </a>
             <a href="#how-it-works" className="text-ultra-violet hover:text-iris transition-colors">
-              Как Работи
+              Кандидат-студенти
             </a>
             <a href="#download" className="text-ultra-violet hover:text-iris transition-colors">
               Изтегляне
@@ -53,7 +53,7 @@ const Navbar = () => {
               className="block py-2 text-ultra-violet hover:text-iris transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Как Работи
+              Кандидат-студенти
             </a>
             <a 
               href="#download" 
