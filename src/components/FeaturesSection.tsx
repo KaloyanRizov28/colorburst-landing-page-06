@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Check, GraduationCap, School } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -58,7 +59,8 @@ const FeaturesSection = () => {
       });
     }, 1500);
   };
-  const benefits = ["Ефективна комуникация между студенти и преподаватели", "Централизирана информационна система за всички университетски дейности", "Улеснен достъп до учебни материали и ресурси", "Интеграция с партньорски фирми за стажове и работа", "Аналитични инструменти за проследяване на развитието на студентите"];
+  // Removed two items from the benefits array
+  const benefits = ["Ефективна комуникация между студенти и преподаватели", "Централизирана информационна система за всички университетски дейности", "Интеграция с партньорски фирми за стажове и работа"];
   return <section id="features" className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
@@ -68,7 +70,7 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h3 className="text-2xl font-bold text-ultra-violet mb-6">Заявете демонстрация</h3>
             <p className="text-ultra-violet/70 mb-8">
@@ -124,7 +126,7 @@ const FeaturesSection = () => {
             </form>
           </div>
           
-          <div className="bg-white p-8 rounded-xl shadow-lg border border-iris/10">
+          <div className="bg-white p-8 rounded-xl shadow-lg border border-iris/10 h-full">
             <h3 className="text-2xl font-semibold text-ultra-violet mb-6 flex items-center gap-2">
               <School className="h-6 w-6 text-iris" />
               Ползи за университета
