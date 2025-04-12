@@ -106,7 +106,7 @@ const Index = () => {
                 <div>
                   <h2 className="sub-header">Какво да очаквате?</h2>
                   <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">🧠 Всички твои групи, на едно място</p>
-                  <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">📱 Мобилно приложение за студенти</p>
+                  <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">📅 Личен календар със събития от групите ти</p>
                   <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">🔍 Стажове при партньори по интереси и специалност</p>
                 </div>
               </div>
