@@ -56,16 +56,7 @@ const HeroSection = () => {
               
               {/* Phone interface with app screenshot */}
               <div className="absolute inset-0 p-3">
-                <div className="h-full w-full bg-white/90 rounded-3xl overflow-hidden flex flex-col">
-                  {/* Phone status bar */}
-                  <div className="h-6 bg-ultra-violet/10 flex items-center justify-between px-4">
-                    <div className="text-[10px] font-medium">12:45</div>
-                    <div className="flex space-x-1">
-                      <div className="w-3 h-3 rounded-full bg-ultra-violet/20"></div>
-                      <div className="w-3 h-3 rounded-full bg-ultra-violet/20"></div>
-                    </div>
-                  </div>
-                  
+                <div className="h-full w-full bg-white/90 rounded-3xl overflow-hidden flex flex-col">                  
                   {/* Content area with app screenshot image */}
                   <div className="flex-1 p-2">
                     <AspectRatio ratio={9 / 16} className="bg-white rounded-lg overflow-hidden shadow-sm">
