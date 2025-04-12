@@ -55,19 +55,12 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-iris via-myrtle-green to-iris opacity-70"></div>
               
               {/* Phone interface with app screenshot */}
-              <div className="absolute inset-0 p-3">
-                <div className="h-full w-full bg-white/90 rounded-3xl overflow-hidden flex flex-col">                  
-                  {/* Content area with app screenshot image */}
-                  <div className="flex-1 p-2">
-                    <AspectRatio ratio={9 / 16} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                      <img 
-                        src="/lovable-uploads/45c47293-992d-45d0-9e4b-bc14b72089b2.png" 
-                        alt="megdan App Interface" 
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </AspectRatio>
-                  </div>
-                </div>
+              <div className="absolute inset-0">
+                <img 
+                  src="/lovable-uploads/45c47293-992d-45d0-9e4b-bc14b72089b2.png" 
+                  alt="megdan App Interface" 
+                  className="w-full h-full object-cover rounded-[2.3rem]"
+                />
               </div>
               <div
                 className={`absolute inset-0 flex flex-col items-center justify-center text-white transition-all duration-700 ${
