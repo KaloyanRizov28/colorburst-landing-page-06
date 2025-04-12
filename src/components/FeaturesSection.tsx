@@ -52,21 +52,45 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className={`bg-white p-6 rounded-xl shadow-md transition-all duration-300 
-                          ${activeFeature === index ? 'scale-105 shadow-xl' : 'hover:shadow-lg hover:-translate-y-1'}`}
+              className={`
+                bg-white p-6 rounded-xl shadow-md 
+                transform transition-all duration-500 ease-in-out 
+                hover:scale-105 hover:shadow-xl 
+                group cursor-pointer
+                ${activeFeature === index 
+                  ? 'scale-105 shadow-xl bg-gradient-to-br from-white to-iris/5' 
+                  : 'hover:bg-gradient-to-br hover:from-white hover:to-iris/5'}
+              `}
               onMouseEnter={() => setActiveFeature(index)}
               onMouseLeave={() => setActiveFeature(null)}
             >
-              <div className="mb-4 transform transition-transform duration-300 hover:scale-110">
+              <div className={`
+                mb-4 transform transition-transform duration-300 
+                group-hover:scale-110 group-hover:rotate-6
+              `}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-ultra-violet">{feature.title}</h3>
-              <p className="text-ultra-violet/70">{feature.description}</p>
+              <h3 className={`
+                text-xl font-semibold mb-2 text-ultra-violet 
+                transition-colors duration-300 
+                group-hover:text-iris
+              `}>{feature.title}</h3>
+              <p className={`
+                text-ultra-violet/70 
+                transition-colors duration-300 
+                group-hover:text-ultra-violet/90
+              `}>{feature.description}</p>
               
               {activeFeature === index && (
-                <div className="mt-4 overflow-hidden animate-fade-in">
+                <div className="mt-4 overflow-hidden animate-slide-up">
                   <p className="text-sm text-ultra-violet/80 mb-3">{feature.details}</p>
-                  <button className="flex items-center text-iris hover:text-iris/80 transition-colors text-sm font-medium">
+                  <button className="
+                    flex items-center 
+                    text-iris hover:text-iris/80 
+                    transition-all duration-300 
+                    text-sm font-medium
+                    transform hover:translate-x-1
+                  ">
                     Learn more <ChevronRight className="w-4 h-4 ml-1" />
                   </button>
                 </div>
