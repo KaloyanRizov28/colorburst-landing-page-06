@@ -1,12 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { User, UserRound } from "lucide-react";
-
 const DownloadSection = () => {
   return <section id="download" className="section-padding bg-myrtle-green text-white">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <h2 className="text-4xl font-bold mb-4">Готови ли сте да Трансформирате Вашето Изживяване?</h2>
+        <h2 className="text-4xl font-bold mb-4">Готови ли сте да се присъедините към останалите студенти от вашия университет?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto text-white/80">
           Изтеглете нашето приложение днес и се присъединете към хилядите доволни потребители, които са трансформирали своето мобилно изживяване.
         </p>
