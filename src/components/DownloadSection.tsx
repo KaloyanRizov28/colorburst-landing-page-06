@@ -1,4 +1,8 @@
+
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { User, UserRound } from "lucide-react";
+
 const DownloadSection = () => {
   return <section id="download" className="section-padding bg-myrtle-green text-white">
       <div className="container mx-auto px-4 md:px-6 text-center">
@@ -19,17 +23,44 @@ const DownloadSection = () => {
         <div className="mt-12 flex flex-col items-center">
           <p className="text-white/80 mb-4">Нашият екип</p>
           <div className="flex gap-4 items-center justify-center flex-wrap">
+            {/* First female avatar */}
             <div className="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center">
-              <span className="text-xs">ЛОГО</span>
+              <Avatar className="w-14 h-14 border-2 border-white/20">
+                <AvatarImage src="https://i.pravatar.cc/150?img=5" alt="Female team member" />
+                <AvatarFallback className="bg-iris/80 text-white">
+                  <User className="h-7 w-7" />
+                </AvatarFallback>
+              </Avatar>
             </div>
+            
+            {/* First male avatar */}
             <div className="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center">
-              <span className="text-xs">ЛОГО</span>
+              <Avatar className="w-14 h-14 border-2 border-white/20">
+                <AvatarImage src="https://i.pravatar.cc/150?img=12" alt="Male team member" />
+                <AvatarFallback className="bg-iris/80 text-white">
+                  <UserRound className="h-7 w-7" />
+                </AvatarFallback>
+              </Avatar>
             </div>
+            
+            {/* Second female avatar */}
             <div className="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center">
-              <span className="text-xs">ЛОГО</span>
+              <Avatar className="w-14 h-14 border-2 border-white/20">
+                <AvatarImage src="https://i.pravatar.cc/150?img=9" alt="Female team member" />
+                <AvatarFallback className="bg-iris/80 text-white">
+                  <User className="h-7 w-7" />
+                </AvatarFallback>
+              </Avatar>
             </div>
+            
+            {/* Second male avatar */}
             <div className="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center">
-              <span className="text-xs">ЛОГО</span>
+              <Avatar className="w-14 h-14 border-2 border-white/20">
+                <AvatarImage src="https://i.pravatar.cc/150?img=67" alt="Male team member" />
+                <AvatarFallback className="bg-iris/80 text-white">
+                  <UserRound className="h-7 w-7" />
+                </AvatarFallback>
+              </Avatar>
             </div>
           </div>
         </div>
