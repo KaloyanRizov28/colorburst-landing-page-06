@@ -25,6 +25,12 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-6">
             <button 
+              onClick={() => scrollToSection('expectations')}
+              className="text-ultra-violet hover:text-iris transition-colors"
+            >
+              Очаквания
+            </button>
+            <button 
               onClick={() => scrollToSection('features')}
               className="text-ultra-violet hover:text-iris transition-colors"
             >
@@ -54,6 +60,12 @@ const Navbar = () => {
 
         {isMenuOpen && (
           <div className="md:hidden py-4 px-4 space-y-4 bg-platinum">
+            <button 
+              onClick={() => scrollToSection('expectations')}
+              className="block py-2 text-ultra-violet hover:text-iris transition-colors w-full text-left"
+            >
+              Очаквания
+            </button>
             <button 
               onClick={() => scrollToSection('features')}
               className="block py-2 text-ultra-violet hover:text-iris transition-colors w-full text-left"
