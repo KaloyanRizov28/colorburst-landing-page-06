@@ -57,7 +57,7 @@ const HeroSection = () => {
               {/* Phone interface with app screenshot */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/45c47293-992d-45d0-9e4b-bc14b72089b2.png" 
+                  src="/lovable-uploads/b71a480e-2c0c-41a9-a4d5-22f551d82128.png" 
                   alt="megdan App Interface" 
                   className="w-288px h-600px object-contain rounded-[2.3rem] p-1"
                 />
