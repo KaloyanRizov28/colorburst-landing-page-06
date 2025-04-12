@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -15,12 +14,11 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/0c906054-f39e-494c-b0a4-9ad0c6c8bddf.png" 
                 alt="Megdan Logo" 
-                className="h-10 text-iris"
+                className="h-16 w-auto object-contain"
               />
             </a>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <a href="#features" className="text-ultra-violet hover:text-iris transition-colors">
               Features
@@ -34,7 +32,6 @@ const Navbar = () => {
             <Button className="bg-iris hover:bg-iris/80 ml-2">Get Started</Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -46,7 +43,6 @@ const Navbar = () => {
           </div>
         </nav>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 px-4 space-y-4 bg-platinum">
             <a 
