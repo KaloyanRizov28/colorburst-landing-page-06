@@ -50,7 +50,11 @@ const Index = () => {
         <HeroSection />
         <div className="reveal" id="features">
           {/* Second phone on the left side before Features section */}
-          <div className="container mx-auto px-4 md:px-6 py-12">
+          <div className="container mx-auto px-4 md:px-6 py-12 relative overflow-hidden bg-gradient-to-br from-platinum/40 to-white rounded-xl">
+            {/* Decorative gradient elements */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-screamin-green/20 blur-3xl"></div>
+            <div className="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-iris/20 blur-3xl"></div>
+            
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="flex justify-center">
                 <div className="relative w-64 h-[530px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transform -rotate-6">
