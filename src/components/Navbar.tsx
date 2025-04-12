@@ -7,6 +7,14 @@ import Logo from "./Logo";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <header className="w-full fixed top-0 z-50 bg-platinum/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 md:px-6">
@@ -16,9 +24,12 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#features" className="text-ultra-violet hover:text-iris transition-colors">
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="text-ultra-violet hover:text-iris transition-colors"
+            >
               Университети
-            </a>
+            </button>
             <a href="#how-it-works" className="text-ultra-violet hover:text-iris transition-colors">
               Кандидат-студенти
             </a>
@@ -43,13 +54,12 @@ const Navbar = () => {
 
         {isMenuOpen && (
           <div className="md:hidden py-4 px-4 space-y-4 bg-platinum">
-            <a 
-              href="#features" 
-              className="block py-2 text-ultra-violet hover:text-iris transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="block py-2 text-ultra-violet hover:text-iris transition-colors w-full text-left"
             >
               Университети
-            </a>
+            </button>
             <a 
               href="#how-it-works" 
               className="block py-2 text-ultra-violet hover:text-iris transition-colors"
