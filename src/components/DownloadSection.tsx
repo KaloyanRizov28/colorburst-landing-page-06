@@ -5,9 +5,7 @@ const DownloadSection = () => {
   return <section id="download" className="section-padding bg-myrtle-green text-white">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-4xl font-bold mb-4">Готови ли сте да се присъедините към останалите студенти от вашия университет?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto text-white/80">
-          Изтеглете нашето приложение днес и се присъединете към хилядите доволни потребители, които са трансформирали своето мобилно изживяване.
-        </p>
+        <p className="text-xl mb-8 max-w-2xl mx-auto text-white/80">MegDan работи директно с твоя университет. Няма нужда от регистрация – просто влез с имейла си и открий какво се случва около теб.</p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button className="bg-screamin-green hover:bg-screamin-green/90 text-ultra-violet text-lg px-8 py-6">
