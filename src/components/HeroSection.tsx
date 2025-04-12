@@ -79,12 +79,7 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              
               <div className={`absolute inset-0 flex flex-col items-center justify-center text-white transition-all duration-700 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}>
-                <div className="grid grid-cols-3 gap-3 p-4">
-                  {[1, 2, 3, 4, 5, 6].map(item => <div key={item} className="w-12 h-12 bg-white/20 rounded-lg backdrop-blur-sm hover:bg-white/30 transition-all duration-300" style={{
-                  animationDelay: `${item * 0.1}s`
-                }}></div>)}
                 </div>
               </div>
             </div>
