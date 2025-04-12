@@ -5,9 +5,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-xl font-bold text-iris mb-4">Megdan</h3>
-            <p className="text-ultra-violet/70 mb-4 max-w-sm">
-              Нашата мисия е да предоставим изключително мобилно изживяване, което подобрява ежедневието ви чрез иновативни технологии.
-            </p>
+            <p className="text-ultra-violet/70 mb-4 max-w-sm"></p>
             <div className="flex gap-4">
               <a href="#" className="text-iris hover:text-iris/80 transition-colors">
                 <Facebook size={20} />
