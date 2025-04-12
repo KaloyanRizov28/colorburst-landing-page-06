@@ -40,7 +40,7 @@ const HeroSection = () => {
             <div className={`phone-container relative w-64 h-[530px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${animatePhone ? 'transform-none' : 'translate-y-8 opacity-80'}`}>
               <div className="absolute inset-0 bg-gradient-to-br from-iris via-myrtle-green to-iris opacity-70"></div>
               
-              {/* Phone interface with iframe */}
+              {/* Phone interface with app screenshot */}
               <div className="absolute inset-0 p-3">
                 <div className="h-full w-full bg-white/90 rounded-3xl overflow-hidden flex flex-col">
                   {/* Phone status bar */}
@@ -52,10 +52,14 @@ const HeroSection = () => {
                     </div>
                   </div>
                   
-                  {/* Content area with iframe in AspectRatio container */}
+                  {/* Content area with app screenshot image */}
                   <div className="flex-1 p-2">
                     <AspectRatio ratio={9 / 16} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                      <iframe src="https://lovable.ai" title="Демо на Приложението" className="w-full h-full border-0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                      <img 
+                        src="/lovable-uploads/50228073-0a91-4175-9f96-f37efd705353.png" 
+                        alt="megdan App Interface" 
+                        className="w-full h-full object-cover"
+                      />
                     </AspectRatio>
                   </div>
                   
