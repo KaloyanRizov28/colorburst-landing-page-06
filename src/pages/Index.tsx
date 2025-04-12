@@ -104,7 +104,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className="sub-header">Заяви демонстрация за университети</h2>
+                  <h2 className="sub-header">Заяви демо за университет</h2>
                   <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">🎯 Университетски админ панел</p>
                   <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">📱 Мобилно приложение за студенти</p>
                   <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">🔍 Стажове при партньори по интереси и специалност</p>
