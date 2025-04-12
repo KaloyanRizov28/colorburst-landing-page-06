@@ -48,7 +48,7 @@ const HeroSection = () => {
             }}
           >
             <div
-              className={`phone-container relative w-60 h-[700px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${
+              className={`phone-container relative w-60 h-[600px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${
                 animatePhone ? "transform-none" : "translate-y-8 opacity-80"
               }`}
             >
@@ -59,7 +59,7 @@ const HeroSection = () => {
                 <img 
                   src="/lovable-uploads/45c47293-992d-45d0-9e4b-bc14b72089b2.png" 
                   alt="megdan App Interface" 
-                  className="w-68 h-[650px] h-full object-contain rounded-[2.3rem] p-1"
+                  className="w-full h-full object-contain rounded-[2.3rem] p-1"
                 />
               </div>
               
