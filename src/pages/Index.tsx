@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -105,8 +106,9 @@ const Index = () => {
                 </div>
                 <div>
                   <h2 className="sub-header">Заяви демонстрация за университети</h2>
-                  <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">🎯 Университетски админ панел
-                </p>
+                  <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">🎯 Университетски админ панел</p>
+                  <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">📱 Мобилно приложение за студенти</p>
+                  <p className="mb-6 text-ultra-violet/80 text-lg font-normal text-left">📊 Анализ и статистика за използването</p>
                 </div>
               </div>
             </div>
