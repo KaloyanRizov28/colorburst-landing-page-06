@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ArrowDown } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -52,6 +53,46 @@ const HeroSection = () => {
               }`}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-iris via-myrtle-green to-iris opacity-70"></div>
+              
+              {/* Phone interface with app screenshot */}
+              <div className="absolute inset-0 p-3">
+                <div className="h-full w-full bg-white/90 rounded-3xl overflow-hidden flex flex-col">
+                  {/* Phone status bar */}
+                  <div className="h-6 bg-ultra-violet/10 flex items-center justify-between px-4">
+                    <div className="text-[10px] font-medium">12:45</div>
+                    <div className="flex space-x-1">
+                      <div className="w-3 h-3 rounded-full bg-ultra-violet/20"></div>
+                      <div className="w-3 h-3 rounded-full bg-ultra-violet/20"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Content area with app screenshot image */}
+                  <div className="flex-1 p-2">
+                    <AspectRatio ratio={9 / 16} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                      <img 
+                        src="/lovable-uploads/45c47293-992d-45d0-9e4b-bc14b72089b2.png" 
+                        alt="megdan App Interface" 
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </AspectRatio>
+                  </div>
+                  
+                  {/* Bottom navigation */}
+                  <div className="h-12 bg-ultra-violet/5 flex justify-evenly items-center px-2">
+                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
+                      <div className="w-3 h-3 rounded-sm bg-iris/60"></div>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
+                      <div className="w-3 h-3 rounded-full bg-iris/60"></div>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
+                      <div className="w-3 h-3 bg-iris/60" style={{
+                        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 50% 65%, 0% 100%)"
+                      }}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div
                 className={`absolute inset-0 flex flex-col items-center justify-center text-white transition-all duration-700 ${
                   isScrolled ? "opacity-0" : "opacity-100"
