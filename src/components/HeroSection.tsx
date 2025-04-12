@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Info } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const HeroSection = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,6 +70,47 @@ const HeroSection = () => {
               className={`phone-container relative w-64 h-[530px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${animatePhone ? 'transform-none' : 'translate-y-8 opacity-80'}`}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-iris via-myrtle-green to-iris opacity-70"></div>
+              
+              {/* Phone interface with iframe */}
+              <div className="absolute inset-0 p-3">
+                <div className="h-full w-full bg-white/90 rounded-3xl overflow-hidden flex flex-col">
+                  {/* Phone status bar */}
+                  <div className="h-6 bg-ultra-violet/10 flex items-center justify-between px-4">
+                    <div className="text-[10px] font-medium">12:45</div>
+                    <div className="flex space-x-1">
+                      <div className="w-3 h-3 rounded-full bg-ultra-violet/20"></div>
+                      <div className="w-3 h-3 rounded-full bg-ultra-violet/20"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Content area with iframe in AspectRatio container */}
+                  <div className="flex-1 p-2">
+                    <AspectRatio ratio={9/16} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                      <iframe 
+                        src="https://lovable.ai" 
+                        title="Демо на Приложението"
+                        className="w-full h-full border-0"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      ></iframe>
+                    </AspectRatio>
+                  </div>
+                  
+                  {/* Bottom navigation */}
+                  <div className="h-12 bg-ultra-violet/5 flex justify-evenly items-center px-2">
+                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
+                      <div className="w-3 h-3 rounded-sm bg-iris/60"></div>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
+                      <div className="w-3 h-3 rounded-full bg-iris/60"></div>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
+                      <div className="w-3 h-3 bg-iris/60" style={{clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 50% 65%, 0% 100%)"}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
               <div className={`absolute inset-0 flex flex-col items-center justify-center text-white transition-all duration-700 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}>
                 <span className="text-xl font-semibold mb-4">Интерфейс на Приложението</span>
                 <div className="w-16 h-1 bg-white rounded-full mb-4"></div>
