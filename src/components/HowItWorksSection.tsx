@@ -5,26 +5,26 @@ import { Button } from "@/components/ui/button";
 const steps = [
   {
     number: "01",
-    title: "Download the App",
-    description: "Get our app from the App Store or Google Play Store with just one click."
+    title: "Изтеглете Приложението",
+    description: "Вземете нашето приложение от App Store или Google Play Store само с един клик."
   },
   {
     number: "02",
-    title: "Create an Account",
-    description: "Set up your profile in seconds and customize your preferences."
+    title: "Създайте Акаунт",
+    description: "Настройте профила си за секунди и персонализирайте предпочитанията си."
   },
   {
     number: "03",
-    title: "Explore Features",
-    description: "Discover all the tools and features available to enhance your experience."
+    title: "Разгледайте Функциите",
+    description: "Открийте всички инструменти и функции, налични за подобряване на вашето изживяване."
   }
 ];
 
 const benefits = [
-  "Save up to 10 hours each week",
-  "Reduce stress with automated organization",
-  "Connect with your network seamlessly",
-  "Access important information instantly"
+  "Спестете до 10 часа всяка седмица",
+  "Намалете стреса с автоматизирана организация",
+  "Свържете се с вашата мрежа безпроблемно",
+  "Достъп до важна информация моментално"
 ];
 
 const HowItWorksSection = () => {
@@ -33,9 +33,9 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6">How It Works</h2>
+            <h2 className="text-4xl font-bold mb-6">Как Работи</h2>
             <p className="text-white/80 mb-8 text-lg">
-              Getting started is simple. Follow these steps to transform your mobile experience today.
+              Започването е просто. Следвайте тези стъпки, за да трансформирате мобилното си изживяване днес.
             </p>
             
             <div className="space-y-8">
@@ -56,7 +56,7 @@ const HowItWorksSection = () => {
           </div>
           
           <div className="bg-iris/10 p-8 rounded-xl border border-iris/30">
-            <h3 className="text-2xl font-semibold mb-6">Why Choose Our App?</h3>
+            <h3 className="text-2xl font-semibold mb-6">Защо Да Изберете Нашето Приложение?</h3>
             
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
@@ -70,7 +70,7 @@ const HowItWorksSection = () => {
             </div>
             
             <Button className="w-full bg-screamin-green hover:bg-screamin-green/90 text-ultra-violet">
-              Get Started Today
+              Започнете Днес
             </Button>
           </div>
         </div>

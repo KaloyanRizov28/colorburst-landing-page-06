@@ -17,15 +17,15 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-6">
             <a href="#features" className="text-ultra-violet hover:text-iris transition-colors">
-              Features
+              Функции
             </a>
             <a href="#how-it-works" className="text-ultra-violet hover:text-iris transition-colors">
-              How It Works
+              Как Работи
             </a>
             <a href="#download" className="text-ultra-violet hover:text-iris transition-colors">
-              Download
+              Изтегляне
             </a>
-            <Button className="bg-iris hover:bg-iris/80 ml-2">Get Started</Button>
+            <Button className="bg-iris hover:bg-iris/80 ml-2">Започнете</Button>
           </div>
 
           <div className="md:hidden">
@@ -46,27 +46,27 @@ const Navbar = () => {
               className="block py-2 text-ultra-violet hover:text-iris transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Features
+              Функции
             </a>
             <a 
               href="#how-it-works" 
               className="block py-2 text-ultra-violet hover:text-iris transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              How It Works
+              Как Работи
             </a>
             <a 
               href="#download" 
               className="block py-2 text-ultra-violet hover:text-iris transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Download
+              Изтегляне
             </a>
             <Button 
               className="w-full bg-iris hover:bg-iris/80 mt-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Get Started
+              Започнете
             </Button>
           </div>
         )}

@@ -40,10 +40,10 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <h1 className="main-header">
-              Transform Your Mobile Experience
+              Трансформирайте Вашето Мобилно Преживяване
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-lg text-ultra-violet/80">
-              Our innovative app helps you stay connected, organized, and productive with intuitive features designed for modern life.
+              Нашето иновативно приложение ви помага да останете свързани, организирани и продуктивни с интуитивни функции, проектирани за модерния живот.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -53,13 +53,13 @@ const HeroSection = () => {
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-iris to-ultra-violet opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative flex items-center">
                   <Download className="mr-2 h-5 w-5 transition-transform group-hover:translate-y-1" />
-                  Download Now
+                  Изтеглете Сега
                 </span>
               </Button>
               <Button className="bg-transparent border border-iris text-iris hover:bg-iris/10 transition-all duration-300 relative group">
                 <span className="relative z-10 flex items-center">
                   <Info className="mr-2 h-5 w-5 transition-transform group-hover:rotate-12" />
-                  Learn More
+                  Научете Повече
                 </span>
               </Button>
             </div>
@@ -70,7 +70,7 @@ const HeroSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-iris via-myrtle-green to-iris opacity-70"></div>
               <div className={`absolute inset-0 flex flex-col items-center justify-center text-white transition-all duration-700 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}>
-                <span className="text-xl font-semibold mb-4">App Interface</span>
+                <span className="text-xl font-semibold mb-4">Интерфейс на Приложението</span>
                 <div className="w-16 h-1 bg-white rounded-full mb-4"></div>
                 <div className="grid grid-cols-3 gap-3 p-4">
                   {[1, 2, 3, 4, 5, 6].map((item) => (
@@ -91,7 +91,7 @@ const HeroSection = () => {
             href="#features" 
             className="flex flex-col items-center text-ultra-violet hover:text-iris transition-colors group"
           >
-            <span className="mb-2 group-hover:transform group-hover:translate-y-1 transition-transform">Learn More</span>
+            <span className="mb-2 group-hover:transform group-hover:translate-y-1 transition-transform">Научете Повече</span>
             <ArrowDown className="animate-bounce" />
           </a>
         </div>

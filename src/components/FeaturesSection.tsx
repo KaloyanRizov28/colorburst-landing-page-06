@@ -42,9 +42,9 @@ const FeaturesSection = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="sub-header">Powerful Features</h2>
+          <h2 className="sub-header">Мощни Функции</h2>
           <p className="text-lg text-ultra-violet/70 max-w-2xl mx-auto">
-            Discover what makes our app stand out from the crowd with these carefully crafted features.
+            Открийте какво прави нашето приложение да се отличава от останалите с тези внимателно разработени функции.
           </p>
         </div>
         
@@ -90,7 +90,7 @@ const FeaturesSection = () => {
                   text-sm font-medium
                   transform hover:translate-x-1
                 ">
-                  Learn more <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                  Научете повече <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
             </div>

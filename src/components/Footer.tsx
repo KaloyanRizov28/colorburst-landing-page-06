@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold text-iris mb-4">AppName</h3>
+            <h3 className="text-xl font-bold text-iris mb-4">ИмеНаПриложението</h3>
             <p className="text-ultra-violet/70 mb-4 max-w-sm">
-              Our mission is to deliver an exceptional mobile experience that enhances your daily life through innovative technology.
+              Нашата мисия е да предоставим изключително мобилно изживяване, което подобрява ежедневието ви чрез иновативни технологии.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-iris hover:text-iris/80 transition-colors">
@@ -28,47 +28,47 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold text-ultra-violet mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-ultra-violet mb-4">Бързи Връзки</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#features" className="text-ultra-violet/70 hover:text-iris transition-colors">
-                  Features
+                  Функции
                 </a>
               </li>
               <li>
                 <a href="#how-it-works" className="text-ultra-violet/70 hover:text-iris transition-colors">
-                  How It Works
+                  Как Работи
                 </a>
               </li>
               <li>
                 <a href="#download" className="text-ultra-violet/70 hover:text-iris transition-colors">
-                  Download
+                  Изтегляне
                 </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold text-ultra-violet mb-4">Support</h4>
+            <h4 className="text-lg font-semibold text-ultra-violet mb-4">Поддръжка</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-ultra-violet/70 hover:text-iris transition-colors">
-                  Help Center
+                  Център за Помощ
                 </a>
               </li>
               <li>
                 <a href="#" className="text-ultra-violet/70 hover:text-iris transition-colors">
-                  Privacy Policy
+                  Политика за Поверителност
                 </a>
               </li>
               <li>
                 <a href="#" className="text-ultra-violet/70 hover:text-iris transition-colors">
-                  Terms of Service
+                  Условия за Ползване
                 </a>
               </li>
               <li>
                 <a href="#" className="text-ultra-violet/70 hover:text-iris transition-colors">
-                  Contact Us
+                  Свържете се с Нас
                 </a>
               </li>
             </ul>
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-ultra-violet/10 mt-12 pt-6 text-center text-ultra-violet/60">
-          <p>&copy; {new Date().getFullYear()} AppName. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ИмеНаПриложението. Всички права запазени.</p>
         </div>
       </div>
     </footer>

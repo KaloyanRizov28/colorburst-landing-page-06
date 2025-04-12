@@ -108,15 +108,15 @@ const Index = () => {
                   <div className="relative w-64 h-[530px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transform -rotate-6 hover:rotate-0 transition-transform duration-500">
                     <div className="absolute inset-0 bg-gradient-to-tr from-screamin-green via-myrtle-green to-iris opacity-70"></div>
                     <div className="absolute inset-0 flex items-center justify-center text-white text-xl font-semibold">
-                      Feature Overview
+                      Преглед на Функциите
                     </div>
                   </div>
                 </div>
                 <div>
-                  <h2 className="sub-header">Discover Amazing Features</h2>
+                  <h2 className="sub-header">Открийте Невероятни Функции</h2>
                   <p className="text-lg mb-6 text-ultra-violet/80">
-                    Our app is packed with powerful features to enhance your mobile experience. 
-                    Explore the intuitive interface and seamless functionality designed with you in mind.
+                    Нашето приложение е пълно с мощни функции, които подобряват мобилното ви изживяване. 
+                    Разгледайте интуитивния интерфейс и безпроблемната функционалност, проектирани с мисъл за вас.
                   </p>
                 </div>
               </div>
