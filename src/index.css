@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 256 44% 53%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,36 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-platinum text-ultra-violet font-sans;
+  }
+}
+
+@layer components {
+  .main-header {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold text-ultra-violet mb-4;
+  }
+  
+  .sub-header {
+    @apply text-2xl sm:text-3xl md:text-4xl font-semibold text-ultra-violet mb-3;
+  }
+  
+  .cta-btn-primary {
+    @apply bg-iris hover:bg-iris/90 text-white px-6 py-3 rounded-full font-medium shadow-lg transition-all;
+  }
+  
+  .cta-btn-secondary {
+    @apply bg-screamin-green hover:bg-screamin-green/90 text-ultra-violet px-6 py-3 rounded-full font-medium shadow-lg transition-all;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .reveal {
+    @apply opacity-0;
+  }
+  
+  .reveal.active {
+    @apply animate-fade-in;
   }
 }
