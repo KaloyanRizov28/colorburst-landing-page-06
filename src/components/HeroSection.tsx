@@ -48,7 +48,7 @@ const HeroSection = () => {
             }}
           >
             <div
-              className={`phone-container relative w-40 h-[700px] md:w-48 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${
+              className={`phone-container relative w-40 h-[700px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${
                 animatePhone ? "transform-none" : "translate-y-8 opacity-80"
               }`}
             >
@@ -57,7 +57,7 @@ const HeroSection = () => {
               {/* Phone interface with app screenshot */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/9084a3e6-74e9-48e5-ad4a-cae43b702cff.png" 
+                  src="/lovable-uploads/45c47293-992d-45d0-9e4b-bc14b72089b2.png" 
                   alt="megdan App Interface" 
                   className="w-full h-full object-contain rounded-[2.3rem] p-1"
                 />
