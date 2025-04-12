@@ -52,18 +52,7 @@ const HeroSection = () => {
                       <div className="w-3 h-3 rounded-full bg-ultra-violet/20"></div>
                     </div>
                   </div>
-                  
-                  {/* Content area with app screenshot image */}
-                  <div className="flex-1 p-2">
-                    <AspectRatio ratio={9 / 16} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                      <img 
-                        src="/lovable-uploads/50228073-0a91-4175-9f96-f37efd705353.png" 
-                        alt="megdan App Interface" 
-                        className="w-full h-full object-cover"
-                      />
-                    </AspectRatio>
-                  </div>
-                  
+
                   {/* Bottom navigation */}
                   <div className="h-12 bg-ultra-violet/5 flex justify-evenly items-center px-2">
                     <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
