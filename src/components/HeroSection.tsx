@@ -36,9 +36,7 @@ const HeroSection = () => {
           animationDelay: "0.2s"
         }}>
             <h1 className="main-header">Твоят университет на едно място</h1>
-            <p className="text-lg md:text-xl mb-8 max-w-lg text-ultra-violet/80">
-              Нашето иновативно приложение ви помага да останете свързани, организирани и продуктивни с интуитивни функции, проектирани за модерния живот.
-            </p>
+            <p className="text-lg md:text-xl mb-8 max-w-lg text-ultra-violet/80">Студентската платформа за свързаност,  ангажираност и информираност.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="cta-btn-primary group relative overflow-hidden" onClick={handleDownloadClick}>
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-iris to-ultra-violet opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
