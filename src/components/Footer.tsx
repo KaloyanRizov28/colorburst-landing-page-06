@@ -1,13 +1,10 @@
-
 import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-platinum py-12">
+  return <footer className="bg-platinum py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold text-iris mb-4">ИмеНаПриложението</h3>
+            <h3 className="text-xl font-bold text-iris mb-4">Megdan</h3>
             <p className="text-ultra-violet/70 mb-4 max-w-sm">
               Нашата мисия е да предоставим изключително мобилно изживяване, което подобрява ежедневието ви чрез иновативни технологии.
             </p>
@@ -79,8 +76,6 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} ИмеНаПриложението. Всички права запазени.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
