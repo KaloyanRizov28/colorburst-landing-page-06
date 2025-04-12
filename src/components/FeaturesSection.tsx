@@ -5,27 +5,27 @@ import { Smartphone, Shield, Zap, Compass, ChevronRight } from "lucide-react";
 const features = [
   {
     icon: <Smartphone className="w-10 h-10 text-iris" />,
-    title: "Intuitive Interface",
-    description: "Designed with simplicity in mind, our app offers a seamless user experience that feels natural from the first use.",
-    details: "Our intuitive interface is crafted with user-centered design principles, ensuring that every interaction feels natural and effortless. The clean layout puts your most important tasks front and center, reducing cognitive load and making navigation a breeze."
+    title: "Интуитивен Интерфейс",
+    description: "Проектиран с простота, нашето приложение предлага безпроблемно потребителско изживяване от първия поглед.",
+    details: "Нашият интуитивен интерфейс е създаден с принципи на потребителски-ориентиран дизайн, осигурявайки естествени и лесни взаимодействия. Чистият оформление поставя най-важните задачи на преден план, като намалява когнитивното натоварване."
   },
   {
     icon: <Shield className="w-10 h-10 text-iris" />,
-    title: "Secure Platform",
-    description: "Your data is protected with industry-leading encryption and privacy measures to ensure complete security.",
-    details: "We implement bank-level 256-bit encryption, regular security audits, and strict data access controls. Your personal information is never shared with third parties, and you maintain full control over your privacy settings."
+    title: "Сигурна Платформа",
+    description: "Вашите данни са защитени с водещо в индустрията криптиране и мерки за поверителност.",
+    details: "Прилагаме криптиране на ниво банкови системи с 256-битова защита, редовни security одити и строги контроли за достъп. Вашата лична информация никога не се споделя с трети страни."
   },
   {
     icon: <Zap className="w-10 h-10 text-iris" />,
-    title: "Lightning Fast",
-    description: "Optimized performance ensures the app runs smoothly even during peak usage times with minimal battery drain.",
-    details: "Our app is built with performance in mind, using efficient algorithms and optimized code to deliver responses in milliseconds. Background processes are designed to minimize battery usage, giving you hours of additional device uptime."
+    title: "Светкавично Бързо",
+    description: "Оптимизирана производителност, която осигурява гладка работа дори по време на максимално натоварване.",
+    details: "Приложението е разработено с фокус върху производителността, използвайки ефективни алгоритми и оптимизиран код. Процесите са проектирани да минимизират разхода на батерия."
   },
   {
     icon: <Compass className="w-10 h-10 text-iris" />,
-    title: "Smart Navigation",
-    description: "Find what you need instantly with our intelligent navigation system and personalized recommendations.",
-    details: "The smart navigation system learns from your usage patterns to predict what you're looking for before you even search. AI-powered recommendations adapt to your preferences over time, becoming more accurate with each interaction."
+    title: "Интелигентна Навигация",
+    description: "Намерете каквото ви трябва мигновено с нашата интелигентна навигационна система и персонализирани препоръки.",
+    details: "Системата за навигация научава от вашите навици и предвижда какво търсите, преди да сте започнали да търсите. AI-базираните препоръки се адаптират към вашите предпочитания."
   }
 ];
 
