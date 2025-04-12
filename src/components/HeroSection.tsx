@@ -48,7 +48,7 @@ const HeroSection = () => {
             }}
           >
             <div
-              className={`phone-container relative w-60 h-[600px] md:w-72 md:h-[600px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${
+              className={`phone-container relative w-60 h-[600px] md:w-65 md:h-[500px] rounded-[3rem] border-8 border-ultra-violet overflow-hidden shadow-xl transition-all duration-500 ${
                 animatePhone ? "transform-none" : "translate-y-8 opacity-80"
               }`}
             >
