@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ExpectationsSection from "@/components/ExpectationsSection";
@@ -8,7 +9,6 @@ import Footer from "@/components/Footer";
 import { useEffect, useState, useRef } from "react";
 
 const Index = () => {
-  const [scrollWidth, setScrollWidth] = useState(0);
   const [activeSection, setActiveSection] = useState("hero");
   const sectionsRef = useRef<{
     [key: string]: HTMLElement | null;
@@ -42,14 +42,10 @@ const Index = () => {
     reveals.forEach(reveal => observer.observe(reveal));
 
     const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollProgress = scrollTop / totalHeight * 100;
-      setScrollWidth(scrollProgress);
-
       const parallaxElements = document.querySelectorAll('.parallax');
       parallaxElements.forEach(element => {
         const speed = element.getAttribute('data-speed') || "0.5";
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
         const yPos = -(scrollTop * parseFloat(speed));
         element.setAttribute('style', `transform: translateY(${yPos}px)`);
       });
@@ -70,10 +66,6 @@ const Index = () => {
     }}></div>
       <div className="fixed bottom-0 right-1/4 w-64 h-64 rounded-full bg-myrtle-green/10 blur-3xl animate-pulse parallax" data-speed="0.4" style={{
       animationDelay: "2s"
-    }}></div>
-      
-      <div className="scroll-indicator" style={{
-      width: `${scrollWidth}%`
     }}></div>
       
       <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
