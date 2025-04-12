@@ -26,7 +26,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="section-padding bg-white">
+    <section id="features" className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="sub-header">Powerful Features</h2>
@@ -39,7 +39,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-platinum p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
             >
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-ultra-violet">{feature.title}</h3>
