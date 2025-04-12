@@ -1,10 +1,12 @@
+
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Info } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 const HeroSection = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [animatePhone, setAnimatePhone] = useState(false);
+  
   useEffect(() => {
     // Start phone animation after a delay
     const phoneTimer = setTimeout(() => {
@@ -22,13 +24,7 @@ const HeroSection = () => {
       clearTimeout(phoneTimer);
     };
   }, []);
-  const handleDownloadClick = () => {
-    // Animation effect when button is clicked
-    document.querySelector('.phone-container')?.classList.add('scale-105');
-    setTimeout(() => {
-      document.querySelector('.phone-container')?.classList.remove('scale-105');
-    }, 300);
-  };
+
   return <section className="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -37,21 +33,6 @@ const HeroSection = () => {
         }}>
             <h1 className="main-header">Твоят университет на едно място</h1>
             <p className="text-lg md:text-xl mb-8 max-w-lg text-ultra-violet/80">Студентската платформа за свързаност,  ангажираност и информираност.</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="cta-btn-primary group relative overflow-hidden" onClick={handleDownloadClick}>
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-iris to-ultra-violet opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="relative flex items-center">
-                  <Download className="mr-2 h-5 w-5 transition-transform group-hover:translate-y-1" />
-                  Изтеглете Сега
-                </span>
-              </Button>
-              <Button className="bg-transparent border border-iris text-iris hover:bg-iris/10 transition-all duration-300 relative group">
-                <span className="relative z-10 flex items-center">
-                  <Info className="mr-2 h-5 w-5 transition-transform group-hover:rotate-12" />
-                  Научете Повече
-                </span>
-              </Button>
-            </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center animate-fade-in" style={{
           animationDelay: "0.4s"
@@ -119,4 +100,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
