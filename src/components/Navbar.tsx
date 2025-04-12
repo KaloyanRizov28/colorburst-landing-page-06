@@ -17,7 +17,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-6">
             <a href="#features" className="text-ultra-violet hover:text-iris transition-colors">
-              Функции
+              Университети
             </a>
             <a href="#how-it-works" className="text-ultra-violet hover:text-iris transition-colors">
               Кандидат-студенти
@@ -46,7 +46,7 @@ const Navbar = () => {
               className="block py-2 text-ultra-violet hover:text-iris transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Функции
+              Университети
             </a>
             <a 
               href="#how-it-works" 

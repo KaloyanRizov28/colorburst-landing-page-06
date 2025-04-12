@@ -1,100 +1,202 @@
 
 import { useState } from "react";
-import { Smartphone, Shield, Zap, Compass, ChevronRight } from "lucide-react";
-
-const features = [
-  {
-    icon: <Smartphone className="w-10 h-10 text-iris" />,
-    title: "Интуитивен Интерфейс",
-    description: "Проектиран с простота, нашето приложение предлага безпроблемно потребителско изживяване от първия поглед.",
-    details: "Нашият интуитивен интерфейс е създаден с принципи на потребителски-ориентиран дизайн, осигурявайки естествени и лесни взаимодействия. Чистият оформление поставя най-важните задачи на преден план, като намалява когнитивното натоварване."
-  },
-  {
-    icon: <Shield className="w-10 h-10 text-iris" />,
-    title: "Сигурна Платформа",
-    description: "Вашите данни са защитени с водещо в индустрията криптиране и мерки за поверителност.",
-    details: "Прилагаме криптиране на ниво банкови системи с 256-битова защита, редовни security одити и строги контроли за достъп. Вашата лична информация никога не се споделя с трети страни."
-  },
-  {
-    icon: <Zap className="w-10 h-10 text-iris" />,
-    title: "Светкавично Бързо",
-    description: "Оптимизирана производителност, която осигурява гладка работа дори по време на максимално натоварване.",
-    details: "Приложението е разработено с фокус върху производителността, използвайки ефективни алгоритми и оптимизиран код. Процесите са проектирани да минимизират разхода на батерия."
-  },
-  {
-    icon: <Compass className="w-10 h-10 text-iris" />,
-    title: "Интелигентна Навигация",
-    description: "Намерете каквото ви трябва мигновено с нашата интелигентна навигационна система и персонализирани препоръки.",
-    details: "Системата за навигация научава от вашите навици и предвижда какво търсите, преди да сте започнали да търсите. AI-базираните препоръки се адаптират към вашите предпочитания."
-  }
-];
+import { Check, GraduationCap, School } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 const FeaturesSection = () => {
-  const [activeFeature, setActiveFeature] = useState<number | null>(null);
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    universityName: "",
+    contactName: "",
+    contactEmail: "",
+    contactPosition: "",
+    studentCount: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSelectChange = (name: string) => (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast({
+        title: "Заявката е изпратена успешно!",
+        description: "Нашият екип ще се свърже с вас скоро на посочения имейл."
+      });
+
+      // Reset form
+      setFormData({
+        universityName: "",
+        contactName: "",
+        contactEmail: "",
+        contactPosition: "",
+        studentCount: "",
+        message: ""
+      });
+    }, 1500);
+  };
+
+  const benefits = [
+    "Ефективна комуникация между студенти и преподаватели",
+    "Централизирана информационна система за всички университетски дейности",
+    "Улеснен достъп до учебни материали и ресурси",
+    "Интеграция с партньорски фирми за стажове и работа",
+    "Аналитични инструменти за проследяване на развитието на студентите"
+  ];
 
   return (
-    <section id="features" className="section-padding relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-platinum to-white opacity-50 pointer-events-none"></div>
-      
-      {/* Animated background elements */}
-      <div className="absolute -top-20 right-10 w-64 h-64 rounded-full bg-iris/10 blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 left-10 w-72 h-72 rounded-full bg-screamin-green/10 blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="sub-header">Мощни Функции</h2>
-          <p className="text-lg text-ultra-violet/70 max-w-2xl mx-auto">
-            Открийте какво прави нашето приложение да се отличава от останалите с тези внимателно разработени функции.
+    <section id="features" className="section-padding">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-ultra-violet mb-4">За университети</h2>
+          <p className="text-ultra-violet/80 max-w-2xl mx-auto text-lg">
+            Подобрете учебния процес и комуникацията с интелигентна платформа за управление на университетски дейности
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className={`
-                bg-white p-6 rounded-xl shadow-md 
-                transform transition-all duration-500 ease-in-out 
-                cursor-pointer overflow-hidden
-                ${activeFeature === index 
-                  ? 'scale-105 shadow-xl bg-gradient-to-br from-white to-iris/5' 
-                  : 'hover:scale-105 hover:shadow-xl hover:bg-gradient-to-br hover:from-white hover:to-iris/5'}
-                group
-              `}
-              onMouseEnter={() => setActiveFeature(index)}
-              onMouseLeave={() => setActiveFeature(null)}
-            >
-              <div className="mb-4 transform transition-transform duration-300 ease-out group-hover:scale-110 group-hover:rotate-6">
-                {feature.icon}
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-2xl font-bold text-ultra-violet mb-6">Заявете демонстрация</h3>
+            <p className="text-ultra-violet/70 mb-8">
+              Попълнете формата по-долу и нашият екип ще се свърже с вас за персонализирана демонстрация на Megdan за вашия университет
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="universityName">Име на университета</Label>
+                <Input 
+                  id="universityName" 
+                  name="universityName" 
+                  placeholder="Въведете име на университета" 
+                  value={formData.universityName}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-ultra-violet transition-colors duration-300 ease-out group-hover:text-iris">
-                {feature.title}
-              </h3>
-              <p className="text-ultra-violet/70 transition-colors duration-300 ease-out group-hover:text-ultra-violet/90">
-                {feature.description}
-              </p>
               
-              <div 
-                className={`
-                  mt-4 overflow-hidden transition-all duration-500 ease-in-out
-                  ${activeFeature === index 
-                    ? 'max-h-96 opacity-100 transform translate-y-0' 
-                    : 'max-h-0 opacity-0 transform translate-y-10'}
-                `}
-              >
-                <p className="text-sm text-ultra-violet/80 mb-3">{feature.details}</p>
-                <button className="
-                  flex items-center 
-                  text-iris hover:text-iris/80 
-                  transition-all duration-300 
-                  text-sm font-medium
-                  transform hover:translate-x-1
-                ">
-                  Научете повече <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="contactName">Име и фамилия</Label>
+                  <Input 
+                    id="contactName" 
+                    name="contactName" 
+                    placeholder="Въведете име и фамилия" 
+                    value={formData.contactName}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="contactPosition">Длъжност</Label>
+                  <Input 
+                    id="contactPosition" 
+                    name="contactPosition" 
+                    placeholder="Въведете длъжност" 
+                    value={formData.contactPosition}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="contactEmail">Служебен имейл</Label>
+                <Input 
+                  id="contactEmail" 
+                  name="contactEmail" 
+                  type="email" 
+                  placeholder="служебен@университет.бг" 
+                  value={formData.contactEmail}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="studentCount">Приблизителен брой студенти</Label>
+                <Select value={formData.studentCount} onValueChange={handleSelectChange("studentCount")} required>
+                  <SelectTrigger id="studentCount">
+                    <SelectValue placeholder="Изберете брой студенти" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="< 1000">По-малко от 1000</SelectItem>
+                    <SelectItem value="1000-5000">1000-5000</SelectItem>
+                    <SelectItem value="5000-10000">5000-10000</SelectItem>
+                    <SelectItem value="10000-20000">10000-20000</SelectItem>
+                    <SelectItem value="> 20000">Повече от 20000</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="message">Допълнителна информация</Label>
+                <Textarea 
+                  id="message" 
+                  name="message" 
+                  placeholder="Споделете повече за вашите нужди и очаквания" 
+                  className="h-24"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                />
+              </div>
+              
+              <Button type="submit" className="w-full bg-iris hover:bg-iris/90" disabled={isSubmitting}>
+                {isSubmitting ? "Изпращане..." : "Заявете демонстрация"}
+              </Button>
+            </form>
+          </div>
+          
+          <div className="bg-white p-8 rounded-xl shadow-lg border border-iris/10">
+            <h3 className="text-2xl font-semibold text-ultra-violet mb-6 flex items-center gap-2">
+              <School className="h-6 w-6 text-iris" />
+              Ползи за университета
+            </h3>
+            
+            <div className="space-y-4 mb-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="mr-3 mt-1">
+                    <Check className="w-5 h-5 text-screamin-green" />
+                  </div>
+                  <p className="text-ultra-violet/80">{benefit}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-md">
+              <div className="absolute inset-0 bg-gradient-to-tr from-myrtle-green via-iris to-screamin-green opacity-70"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white p-6">
+                  <GraduationCap className="mx-auto h-16 w-16 mb-4" />
+                  <h4 className="text-xl font-bold mb-2">Университетски админ панел</h4>
+                  <p className="opacity-90">Управлявайте студенти, преподаватели, разписания и ресурси от един централен интерфейс</p>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
