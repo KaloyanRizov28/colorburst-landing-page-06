@@ -5,16 +5,24 @@ import FeaturesSection from "@/components/FeaturesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import DownloadSection from "@/components/DownloadSection";
 import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Index = () => {
-  // Simple reveal animation on scroll
+  const [scrollWidth, setScrollWidth] = useState(0);
+
+  // Scroll animations and scroll progress indicator
   useEffect(() => {
+    // Reveal animation on scroll
     const handleScroll = () => {
       const reveals = document.querySelectorAll('.reveal');
+      const windowHeight = window.innerHeight;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const totalHeight = document.documentElement.scrollHeight - windowHeight;
+      const scrollProgress = (scrollTop / totalHeight) * 100;
+      
+      setScrollWidth(scrollProgress);
       
       reveals.forEach((reveal) => {
-        const windowHeight = window.innerHeight;
         const elementTop = reveal.getBoundingClientRect().top;
         const elementVisible = 150;
         
@@ -34,6 +42,9 @@ const Index = () => {
   
   return (
     <div className="min-h-screen">
+      {/* Scroll progress indicator */}
+      <div className="scroll-indicator" style={{ width: `${scrollWidth}%` }}></div>
+      
       <Navbar />
       <main>
         <HeroSection />
