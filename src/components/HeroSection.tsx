@@ -59,7 +59,7 @@ const HeroSection = () => {
                 <img 
                   src="/lovable-uploads/07da11d7-2928-4a03-a730-032dfe36dbd6.png" 
                   alt="megdan App Interface" 
-                  className="w-full h-full object-cover rounded-[2.3rem] p-1"
+                  className="w-288px h-600px object-cover rounded-[2.3rem] p-1"
                 />
               </div>
               
