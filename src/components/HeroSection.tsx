@@ -76,21 +76,6 @@ const HeroSection = () => {
                       />
                     </AspectRatio>
                   </div>
-                  
-                  {/* Bottom navigation */}
-                  <div className="h-12 bg-ultra-violet/5 flex justify-evenly items-center px-2">
-                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
-                      <div className="w-3 h-3 rounded-sm bg-iris/60"></div>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
-                      <div className="w-3 h-3 rounded-full bg-iris/60"></div>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-ultra-violet/10 flex items-center justify-center">
-                      <div className="w-3 h-3 bg-iris/60" style={{
-                        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 50% 65%, 0% 100%)"
-                      }}></div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div
