@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
+
 const Footer = () => {
   return <footer className="bg-platinum py-12">
       <div className="container mx-auto px-4 md:px-6">
@@ -71,9 +72,10 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-ultra-violet/10 mt-12 pt-6 text-center text-ultra-violet/60">
-          <p>&copy; {new Date().getFullYear()} ИмеНаПриложението. Всички права запазени.</p>
+          <p>&copy; 2025 Megdan. Всички права запазени.</p>
         </div>
       </div>
     </footer>;
 };
+
 export default Footer;
