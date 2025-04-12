@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Check, GraduationCap, School } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,9 +6,10 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-
 const FeaturesSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     universityName: "",
     contactName: "",
@@ -19,22 +19,22 @@ const FeaturesSection = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSelectChange = (name: string) => (value: string) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -58,17 +58,8 @@ const FeaturesSection = () => {
       });
     }, 1500);
   };
-
-  const benefits = [
-    "Ефективна комуникация между студенти и преподаватели",
-    "Централизирана информационна система за всички университетски дейности",
-    "Улеснен достъп до учебни материали и ресурси",
-    "Интеграция с партньорски фирми за стажове и работа",
-    "Аналитични инструменти за проследяване на развитието на студентите"
-  ];
-
-  return (
-    <section id="features" className="section-padding">
+  const benefits = ["Ефективна комуникация между студенти и преподаватели", "Централизирана информационна система за всички университетски дейности", "Улеснен достъп до учебни материали и ресурси", "Интеграция с партньорски фирми за стажове и работа", "Аналитични инструменти за проследяване на развитието на студентите"];
+  return <section id="features" className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-ultra-violet mb-4">За университети</h2>
@@ -87,52 +78,23 @@ const FeaturesSection = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="universityName">Име на университета</Label>
-                <Input 
-                  id="universityName" 
-                  name="universityName" 
-                  placeholder="Въведете име на университета" 
-                  value={formData.universityName}
-                  onChange={handleInputChange}
-                  required
-                />
+                <Input id="universityName" name="universityName" placeholder="Въведете име на университета" value={formData.universityName} onChange={handleInputChange} required />
               </div>
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="contactName">Име и фамилия</Label>
-                  <Input 
-                    id="contactName" 
-                    name="contactName" 
-                    placeholder="Въведете име и фамилия" 
-                    value={formData.contactName}
-                    onChange={handleInputChange}
-                    required
-                  />
+                  <Input id="contactName" name="contactName" placeholder="Въведете име и фамилия" value={formData.contactName} onChange={handleInputChange} required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="contactPosition">Длъжност</Label>
-                  <Input 
-                    id="contactPosition" 
-                    name="contactPosition" 
-                    placeholder="Въведете длъжност" 
-                    value={formData.contactPosition}
-                    onChange={handleInputChange}
-                    required
-                  />
+                  <Input id="contactPosition" name="contactPosition" placeholder="Въведете длъжност" value={formData.contactPosition} onChange={handleInputChange} required />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="contactEmail">Служебен имейл</Label>
-                <Input 
-                  id="contactEmail" 
-                  name="contactEmail" 
-                  type="email" 
-                  placeholder="служебен@университет.бг" 
-                  value={formData.contactEmail}
-                  onChange={handleInputChange}
-                  required
-                />
+                <Input id="contactEmail" name="contactEmail" type="email" placeholder="служебен@университет.бг" value={formData.contactEmail} onChange={handleInputChange} required />
               </div>
               
               <div className="space-y-2">
@@ -153,14 +115,7 @@ const FeaturesSection = () => {
               
               <div className="space-y-2">
                 <Label htmlFor="message">Допълнителна информация</Label>
-                <Textarea 
-                  id="message" 
-                  name="message" 
-                  placeholder="Споделете повече за вашите нужди и очаквания" 
-                  className="h-24"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                />
+                <Textarea id="message" name="message" placeholder="Споделете повече за вашите нужди и очаквания" className="h-24" value={formData.message} onChange={handleInputChange} />
               </div>
               
               <Button type="submit" className="w-full bg-iris hover:bg-iris/90" disabled={isSubmitting}>
@@ -176,14 +131,12 @@ const FeaturesSection = () => {
             </h3>
             
             <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
+              {benefits.map((benefit, index) => <div key={index} className="flex items-start">
                   <div className="mr-3 mt-1">
                     <Check className="w-5 h-5 text-screamin-green" />
                   </div>
                   <p className="text-ultra-violet/80">{benefit}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
             
             <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-md">
@@ -192,15 +145,13 @@ const FeaturesSection = () => {
                 <div className="text-center text-white p-6">
                   <GraduationCap className="mx-auto h-16 w-16 mb-4" />
                   <h4 className="text-xl font-bold mb-2">Университетски админ панел</h4>
-                  <p className="opacity-90">Управлявайте студенти, преподаватели, разписания и ресурси от един централен интерфейс</p>
+                  <p className="opacity-90">Управлявайте студенти, курсове и съдържание от един централен интерфейс</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FeaturesSection;
