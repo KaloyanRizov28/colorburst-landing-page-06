@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -11,8 +11,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <nav className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-bold text-iris">
-              AppName
+            <a href="#" className="flex items-center">
+              <img 
+                src="/lovable-uploads/0c906054-f39e-494c-b0a4-9ad0c6c8bddf.png" 
+                alt="Megdan Logo" 
+                className="h-10 text-iris"
+              />
             </a>
           </div>
 
